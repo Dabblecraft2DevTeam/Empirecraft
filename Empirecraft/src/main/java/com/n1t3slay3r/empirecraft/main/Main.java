@@ -1688,9 +1688,9 @@ public class Main extends JavaPlugin {
                                                                         if (((ArrayList) serverdata.get("villages").get(playervillage).get("app")).isEmpty()) {
                                                                             serverdata.get("villages").get(playervillage).remove("app");
                                                                         }
-                                                                        sender.sendMessage(ChatColor.AQUA + args[1] + ChatColor.BLUE + " has been sucessfully removed from the applications list");
+                                                                        sender.sendMessage(ChatColor.AQUA + args[1] + ChatColor.BLUE + " has been sucessfully removed from the applications list.");
                                                                     } else {
-                                                                        sender.sendMessage(ChatColor.RED + args[1] + ChatColor.DARK_RED + " does not exsist in the applications list");
+                                                                        sender.sendMessage(ChatColor.RED + args[1] + ChatColor.DARK_RED + " does not exist in the applications list.");
                                                                     }
                                                                 } else {
                                                                     sender.sendMessage(ChatColor.DARK_RED + "There are currently no applications to join the village");
@@ -1752,7 +1752,7 @@ public class Main extends JavaPlugin {
                                                                                         ((HashMap) ((HashMap) serverdata.get("worldmap").get(player.getWorld().getUID().toString()).get(player.getLocation().getChunk().getX())).get(player.getLocation().getChunk().getZ())).put("cla", playervillage);
                                                                                         sender.sendMessage(ChatColor.BLUE + "You have successfully claimed the chunk of land at X " + ChatColor.AQUA + player.getLocation().getChunk().getX() + ChatColor.BLUE + ", Z " + ChatColor.AQUA + player.getLocation().getChunk().getZ() + "");
                                                                                     } else {
-                                                                                        sender.sendMessage(ChatColor.DARK_RED + "You must connect all your plots");
+                                                                                        sender.sendMessage(ChatColor.DARK_RED + "You must connect all your plots.");
                                                                                     }
                                                                                 } else {
                                                                                     sender.sendMessage(ChatColor.DARK_RED + "You must create a rank building first, then you can claim the land surrounding it");
@@ -1793,14 +1793,14 @@ public class Main extends JavaPlugin {
                                                                                             sender.sendMessage(ChatColor.DARK_RED + "You must connect all your plots");
                                                                                         }
                                                                                     } else {
-                                                                                        sender.sendMessage(ChatColor.DARK_RED + "You must create a rank building first, then you can claim the land surrounding it");
+                                                                                        sender.sendMessage(ChatColor.DARK_RED + "You must create a rank building first, then you can claim the land surrounding it.");
                                                                                     }
                                                                                 } else {
-                                                                                    sender.sendMessage(ChatColor.DARK_RED + "You cannot claim land where there is part of a world edit region already exsisting there");
+                                                                                    sender.sendMessage(ChatColor.DARK_RED + "You cannot claim land where there is part of a WorldGuard region already there.");
                                                                                 }
                                                                             }
                                                                         } else {
-                                                                            sender.sendMessage(ChatColor.DARK_RED + "This chunk of land has already been claimed");
+                                                                            sender.sendMessage(ChatColor.DARK_RED + "This chunk of land has already been claimed.");
                                                                         }
                                                                     } else {
                                                                         sender.sendMessage(ChatColor.DARK_RED + "You already have the " + ChatColor.RED + serverdata.get("villages").get(playervillage).get("plc") + ChatColor.DARK_RED + "/" + ChatColor.RED + Config.getInt("Village Ranks." + o + ".Max Plots") + ChatColor.DARK_RED + " plots claimed");
@@ -1852,10 +1852,10 @@ public class Main extends JavaPlugin {
                                                                             sender.sendMessage(ChatColor.DARK_RED + "You cannot unclaim your land when theres a structure on it, use " + ChatColor.RED + "/vil manage takedown" + ChatColor.DARK_RED + " first to confirm your actions");
                                                                         }
                                                                     } else {
-                                                                        sender.sendMessage(ChatColor.DARK_RED + "You cannot unclaim someone elses land");
+                                                                        sender.sendMessage(ChatColor.DARK_RED + "You cannot unclaim someone else's land.");
                                                                     }
                                                                 } else {
-                                                                    sender.sendMessage(ChatColor.DARK_RED + "There is no claimed chunk of land here");
+                                                                    sender.sendMessage(ChatColor.DARK_RED + "There is no claimed chunk of land here.");
                                                                 }
                                                             } else {
                                                                 sender.sendMessage(ChatColor.DARK_RED + "You are not a manager of this village!");
@@ -2374,13 +2374,13 @@ public class Main extends JavaPlugin {
                                                                     if (((ArrayList) serverdata.get("villages").get(playervillage).get("mem")).contains(playername)) {
                                                                         MemberCommands.Leave(playervillage, playername, player, "mem");
                                                                     } else {
-                                                                        sender.sendMessage(ChatColor.DARK_RED + "You cannot leave the village as its owner, you must either abandon it or retire another person to owner");
+                                                                        sender.sendMessage(ChatColor.DARK_RED + "You cannot leave the village as its owner, you must either abandon it or apppoint another person as owner");
                                                                     }
                                                                 } else {
-                                                                    sender.sendMessage(ChatColor.DARK_RED + "You cannot leave the village as its owner, you must either abandon it or retire another person to owner");
+                                                                    sender.sendMessage(ChatColor.DARK_RED + "You cannot leave the village as its owner, you must either abandon it or apppoint another person as owner");
                                                                 }
                                                             } else {
-                                                                sender.sendMessage(ChatColor.DARK_RED + "You cannot leave the village as its owner, you must either abandon it or retire another person to owner");
+                                                                sender.sendMessage(ChatColor.DARK_RED + "You cannot leave the village as its owner, you must either abandon it or apppoint another person as owner");
                                                             }
                                                         } else {
                                                             sender.sendMessage(ChatColor.DARK_RED + "You lack the permissions to use this command");
